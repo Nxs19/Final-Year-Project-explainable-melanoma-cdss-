@@ -1,0 +1,23 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Large datasets (DO NOT push raw HAM10000 images to GitHub)
+*.zip
+*.tar.gz
+HAM10000_images_part_1/
+HAM10000_images_part_2/
+images/
+data/
+
+# IDE / OS specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
