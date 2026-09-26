@@ -8,8 +8,7 @@
 Python 3.10+
 
 ### Installation
-Clone the repository: git clone [https://github.com/Nxs19/Final-Year-Project-explainable-melanoma-cdss-.git](https://github.com/Nxs19/Final-Year-Project-explainable-melanoma-cdss-.git)
-cd Final-Year-Project-explainable-melanoma-cdss-
+Clone the repository: git clone https://github.com/Nxs19/Final-Year-Project-explainable-melanoma-cdss-.git
 
 ### Install dependencies:
 pip install streamlit tensorflow opencv-python pillow pandas numpy
