@@ -96,10 +96,13 @@ if uploaded_file is not None:
         processed_cv2 = raw_cv2
         
     resized_img = cv2.resize(processed_cv2, (224, 224))
-    
-    # Preprocess tensor for MobileNetV2
+
+    # Convert BGR back to RGB for MobileNetV2 tensor
+    resized_rgb = cv2.cvtColor(resized_img, cv2.COLOR_BGR2RGB)
+
+    # Preprocess tensor for MobileNetV2 [-1.0, 1.0]
     tensor_input = tf.keras.applications.mobilenet_v2.preprocess_input(
-        np.expand_dims(resized_img.copy(), axis=0)
+        np.expand_dims(resized_rgb.astype(np.float32), axis=0)
     )
     
     # Run prediction and XAI extraction
